@@ -23,21 +23,36 @@ while numerosN <= 1 or numerosN > 5:
 if numerosN == 2:
     numero1 = int(input(f"Ingresa el primer valor de la {opcion}: "))
     numero2 = int(input(f"Ingresa el segundo valor de la {opcion}: "))
-    numero3 = 0
-    numero4 = 0
-    numero5 = 0
+    if opcion == 1 or opcion == 2:
+        numero3 = 0
+        numero4 = 0
+        numero5 = 0
+    else:
+        numero3 = 1
+        numero4 = 1
+        numero5 = 1
+    
 elif numerosN == 3:
     numero1 = int(input(f"Ingresa el primer valor de la {opcion}: "))
     numero2 = int(input(f"Ingresa el segundo valor de la {opcion}: "))
     numero3 = int(input(f"Ingresa el tercer valor de la {opcion}: "))
-    numero4 = 0
-    numero5 = 0
+    if opcion == 1 or opcion == 2:
+        numero4 = 0
+        numero5 = 0
+    else:
+        numero4 = 1
+        numero5 = 1
+        
 elif numerosN == 4:
     numero1 = int(input(f"Ingresa el primer valor de la {opcion}: "))
     numero2 = int(input(f"Ingresa el segundo valor de la {opcion}: "))
     numero3 = int(input(f"Ingresa el tercer valor de la {opcion}: "))
     numero4 = int(input(f"Ingresa el cuarto valor de la {opcion}: "))
-    numero5 = 0
+    if opcion == 1 or opcion == 2:
+        numero5 = 0
+    else:
+        numero5 = 1
+        
 else:
     numero1 = int(input(f"Ingresa el primer valor de la {opcion}: "))
     numero2 = int(input(f"Ingresa el segundo valor de la {opcion}: "))
@@ -54,9 +69,6 @@ def operaciones(opcion, numero1, numero2, numero3, numero4, numero5):
         restaF = numero1 - numero2 - numero3 - numero4 - numero5
         return restaF
     elif opcion == "Multiplicacion":
-        if(numero1 == 0):
-            numero1 = 1
-        
         multiF = numero1 * numero2 * numero3 * numero4 * numero5
         return multiF
     else:
